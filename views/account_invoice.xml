@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="account_invoice_view_pivot" model="ir.ui.view">
+        <field name="name">account.invoice.view.pivot</field>
+        <field name="model">account.invoice</field>
+        <field name="mode">primary</field>
+        <field name="arch" type="xml">
+            <pivot></pivot>
+        </field>
+    </record>
+
+    <record id="invoice_resume_action" model="ir.actions.act_window">
+        <field name="name">Human readable name</field>
+        <field name="res_model">account.invoice</field>
+        <field name="view_mode">pivot</field>
+    </record>
+
+    <menuitem id="invoice_resume" name="Invoices Resume" parent="account.menu_finance_reports" action="invoice_resume_action"/>
+</odoo>
