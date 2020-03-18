@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="account_invoice_bank_wizard_view_form" model="ir.ui.view">
+        <field name="name">account.invoice.bank_wizard.view.form</field>
+        <field name="model">account.invoice.bank_wizard</field>
+        <field name="arch" type="xml">
+            <form>
+                <group col="4">
+                    <field name="start_date"/>
+                    <field name="end_date"/>
+                </group>
+                <group>
+                    <field name="initial_amount"/>
+                </group>
+                <footer>
+                    <button name="compute" type="object" string="Adjust" class="oe_highlight"/>
+                    or
+                    <button special="cancel" string="Cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <act_window id="invoice_bank_wizard_action" name="Adjust Banks" res_model="account.invoice.bank_wizard" view_mode="form" target="new"/>
+
+    <menuitem id="invoice_bank_wizard" name="Adjust Banks" parent="account.menu_finance_reports" action="invoice_bank_wizard_action"/>
+</odoo>

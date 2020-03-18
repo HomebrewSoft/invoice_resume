@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo noupdate="0">
+    <record id="subtype_bank" model="account.invoice.subtype">
+        <field name="name">Bank</field>
+        <field name="type">bank</field>
+    </record>
+</odoo>
