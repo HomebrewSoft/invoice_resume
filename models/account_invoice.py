@@ -12,8 +12,6 @@ class AccountInvoice(models.Model):
     )
     subtype_id = fields.Many2one(
         comodel_name='account.invoice.subtype',
-        ondelete='restrict',
-        required=True,
     )
     real_amount = fields.Float(
         compute='_get_real_amount',
