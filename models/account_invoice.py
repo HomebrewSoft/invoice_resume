@@ -41,3 +41,11 @@ class AccountInvoice(models.Model):
         for inv in self:
             result.append((inv.id, "%s %s" % (inv.number or TYPES[inv.type], inv.name or '')))
         return result
+
+    @api.model
+    def create(self, values):
+        if values.get('type') in ['out_invoice']:
+            values['subtype_id'] = self.env.ref('invoice_resume.subtype_outcome').id
+        elif values.get('type') in ['in_invoice']:
+            values['subtype_id'] = self.env.ref('invoice_resume.subtype_income').id
+        return super(AccountInvoice, self).create(values)
