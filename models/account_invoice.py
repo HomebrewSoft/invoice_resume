@@ -7,8 +7,19 @@ class AccountInvoice(models.Model):
 
     type = fields.Selection(
         selection_add=[
-            ('bank', 'Bank'),
+            ('bank', _('Bank')),
         ],
+    )
+    type_translated = fields.Selection(
+        selection=[
+            ('out_invoice', _('Incomes')),
+            ('in_invoice', _('Outcomes')),
+            ('out_refund', _('Incomes')),
+            ('in_refund', _('Outcomes')),
+            ('bank', _('Bank')),
+        ],
+        compute='_get_type_translated',
+        store=True,
     )
     subtype_id = fields.Many2one(
         comodel_name='account.invoice.subtype',
@@ -19,6 +30,11 @@ class AccountInvoice(models.Model):
         compute='_get_real_amount',
         store=True,
     )
+
+    @api.depends('type')
+    def _get_type_translated(self):
+        for record in self:
+            record.type_translated = record.type
 
     @api.depends('subtype_id', 'residual')
     def _get_real_amount(self):
@@ -35,7 +51,7 @@ class AccountInvoice(models.Model):
             'in_invoice': _('Vendor Bill'),
             'out_refund': _('Refund'),
             'in_refund': _('Vendor Refund'),
-            'bank': _('Vendor Refund'),
+            'bank': _('Bank'),
         }
         result = []
         for inv in self:

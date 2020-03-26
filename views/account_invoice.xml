@@ -28,7 +28,7 @@
         <field name="mode">primary</field>
         <field name="arch" type="xml">
             <pivot>
-                <field name="type" type="row"/>
+                <field name="type_translated" type="row"/>
                 <field name="subtype_id" type="row"/>
                 <field name="date_due" interval="day" type="col"/>
                 <field name="real_amount" type="measure"/>

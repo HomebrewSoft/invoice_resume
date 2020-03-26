@@ -1,0 +1,206 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* invoice_resume
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 10.0-20190816\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-03-26 23:20+0000\n"
+"PO-Revision-Date: 2020-03-26 23:20+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: invoice_resume
+#: model:ir.ui.view,arch_db:invoice_resume.account_invoice_bank_wizard_view_form
+msgid "Adjust"
+msgstr "Ajustar"
+
+#. module: invoice_resume
+#: model:ir.actions.act_window,name:invoice_resume.invoice_bank_wizard_action
+#: model:ir.ui.menu,name:invoice_resume.invoice_bank_wizard
+msgid "Adjust Banks"
+msgstr "Ajustar Bancos"
+
+#. module: invoice_resume
+#: selection:account.invoice,type_translated:0
+#: selection:account.invoice.subtype,type:0
+#: code:addons/invoice_resume/models/account_invoice.py:10
+#: code:addons/invoice_resume/models/account_invoice.py:19
+#: code:addons/invoice_resume/models/account_invoice.py:54
+#: code:addons/invoice_resume/models/account_invoice_subtype.py:16
+#, python-format
+msgid "Bank"
+msgstr "Banco"
+
+#. module: invoice_resume
+#: model:ir.ui.view,arch_db:invoice_resume.account_invoice_bank_wizard_view_form
+msgid "Cancel"
+msgstr "Cancelar"
+
+#. module: invoice_resume
+#: model:ir.model.fields,field_description:invoice_resume.field_account_invoice_bank_wizard_create_uid
+#: model:ir.model.fields,field_description:invoice_resume.field_account_invoice_subtype_create_uid
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: invoice_resume
+#: model:ir.model.fields,field_description:invoice_resume.field_account_invoice_bank_wizard_create_date
+#: model:ir.model.fields,field_description:invoice_resume.field_account_invoice_subtype_create_date
+msgid "Created on"
+msgstr "Creado el"
+
+#. module: invoice_resume
+#: model:ir.ui.view,arch_db:invoice_resume.account_invoice_view_search
+msgid "Current Month"
+msgstr "Mes actual"
+
+#. module: invoice_resume
+#: model:ir.model.fields,field_description:invoice_resume.field_account_invoice_bank_wizard_display_name
+#: model:ir.model.fields,field_description:invoice_resume.field_account_invoice_subtype_display_name
+msgid "Display Name"
+msgstr "Nombre a mostrar"
+
+#. module: invoice_resume
+#: model:ir.model.fields,field_description:invoice_resume.field_account_invoice_bank_wizard_end_date
+msgid "End date"
+msgstr "Fecha de fin"
+
+#. module: invoice_resume
+#: model:ir.model.fields,field_description:invoice_resume.field_account_invoice_bank_wizard_id
+#: model:ir.model.fields,field_description:invoice_resume.field_account_invoice_subtype_id_3791
+msgid "ID"
+msgstr "ID"
+
+#. module: invoice_resume
+#: selection:account.invoice.subtype,type:0
+#: code:addons/invoice_resume/models/account_invoice_subtype.py:14
+#, python-format
+msgid "Income"
+msgstr "Ingreso"
+
+#. module: invoice_resume
+#: selection:account.invoice,type_translated:0
+#: code:addons/invoice_resume/models/account_invoice.py:15
+#: code:addons/invoice_resume/models/account_invoice.py:17
+#, python-format
+msgid "Incomes"
+msgstr "Ingresos"
+
+#. module: invoice_resume
+#: model:ir.model.fields,field_description:invoice_resume.field_account_invoice_bank_wizard_initial_amount
+msgid "Initial amount"
+msgstr "Initial amount"
+
+#. module: invoice_resume
+#: code:addons/invoice_resume/models/account_invoice.py:50
+#: model:ir.model,name:invoice_resume.model_account_invoice
+#, python-format
+msgid "Invoice"
+msgstr "Factura"
+
+#. module: invoice_resume
+#: model:ir.actions.act_window,name:invoice_resume.invoice_resume_action
+#: model:ir.ui.menu,name:invoice_resume.invoice_resume
+msgid "Invoices Resume"
+msgstr "Resumen de facturas"
+
+#. module: invoice_resume
+#: model:ir.model.fields,field_description:invoice_resume.field_account_invoice_bank_wizard___last_update
+#: model:ir.model.fields,field_description:invoice_resume.field_account_invoice_subtype___last_update
+msgid "Last Modified on"
+msgstr "Última modificación en"
+
+#. module: invoice_resume
+#: model:ir.model.fields,field_description:invoice_resume.field_account_invoice_bank_wizard_write_uid
+#: model:ir.model.fields,field_description:invoice_resume.field_account_invoice_subtype_write_uid
+msgid "Last Updated by"
+msgstr "Última actualización por"
+
+#. module: invoice_resume
+#: model:ir.model.fields,field_description:invoice_resume.field_account_invoice_bank_wizard_write_date
+#: model:ir.model.fields,field_description:invoice_resume.field_account_invoice_subtype_write_date
+msgid "Last Updated on"
+msgstr "Última actualización el"
+
+#. module: invoice_resume
+#: model:ir.model.fields,field_description:invoice_resume.field_account_invoice_subtype_name
+msgid "Name"
+msgstr "Nombre"
+
+#. module: invoice_resume
+#: selection:account.invoice.subtype,type:0
+#: code:addons/invoice_resume/models/account_invoice_subtype.py:15
+#, python-format
+msgid "Outcome"
+msgstr "Egreso"
+
+#. module: invoice_resume
+#: selection:account.invoice,type_translated:0
+#: code:addons/invoice_resume/models/account_invoice.py:16
+#: code:addons/invoice_resume/models/account_invoice.py:18
+#, python-format
+msgid "Outcomes"
+msgstr "Egresos"
+
+#. module: invoice_resume
+#: model:ir.model.fields,field_description:invoice_resume.field_account_invoice_real_amount
+msgid "Real amount"
+msgstr "Monto real"
+
+#. module: invoice_resume
+#: code:addons/invoice_resume/models/account_invoice.py:52
+#, python-format
+msgid "Refund"
+msgstr "Rembolso"
+
+#. module: invoice_resume
+#: model:ir.model.fields,field_description:invoice_resume.field_account_invoice_bank_wizard_start_date
+msgid "Start date"
+msgstr "Fecha de inicio"
+
+#. module: invoice_resume
+#: model:ir.model.fields,field_description:invoice_resume.field_account_invoice_subtype_id
+msgid "Subtype id"
+msgstr "Subtipo"
+
+#. module: invoice_resume
+#: model:ir.model.fields,field_description:invoice_resume.field_account_invoice_subtype_type
+msgid "Type"
+msgstr "Tipo"
+
+#. module: invoice_resume
+#: model:ir.model.fields,field_description:invoice_resume.field_account_invoice_type_translated
+msgid "Type translated"
+msgstr "Tipo (Traducido)"
+
+#. module: invoice_resume
+#: code:addons/invoice_resume/models/account_invoice.py:51
+#, python-format
+msgid "Vendor Bill"
+msgstr "Factura de vendedor"
+
+#. module: invoice_resume
+#: code:addons/invoice_resume/models/account_invoice.py:53
+#, python-format
+msgid "Vendor Refund"
+msgstr "Factura de rembolso"
+
+#. module: invoice_resume
+#: model:ir.model,name:invoice_resume.model_account_invoice_bank_wizard
+msgid "account.invoice.bank_wizard"
+msgstr "account.invoice.bank_wizard"
+
+#. module: invoice_resume
+#: model:ir.model,name:invoice_resume.model_account_invoice_subtype
+msgid "account.invoice.subtype"
+msgstr "account.invoice.subtype"
+
+#. module: invoice_resume
+#: model:ir.ui.view,arch_db:invoice_resume.account_invoice_bank_wizard_view_form
+msgid "or"
+msgstr "o"

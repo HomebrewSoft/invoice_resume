@@ -11,9 +11,9 @@ class AccountInvoiceSubtype(models.Model):
 
     type = fields.Selection(
         [
-            ('in', 'Income'),
-            ('out', 'Outcome'),
-            ('bank', 'Bank'),
+            ('in', _('Income')),
+            ('out', _('Outcome')),
+            ('bank', _('Bank')),
         ],
         required=True,
     )
