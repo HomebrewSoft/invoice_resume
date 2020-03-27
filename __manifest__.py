@@ -1,13 +1,15 @@
 # -*- coding: utf-8 -*-
 {
     'name': 'Invoice Resume',
-    'version': '1.3.0',
+    'version': '1.4.0',
     'author': 'HomebrewSoft',
     'website': 'https://github.com/HomebrewSoft/invoice_resume',
     'depends': [
         'account',
     ],
     'data': [
+        # security
+        'security/ir.model.access.csv',
         # data
         'data/account_account.xml',
         'data/account_invoice_subtype.xml',
