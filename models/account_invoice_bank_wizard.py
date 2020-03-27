@@ -17,7 +17,7 @@ def get_last_date(self):
     return today.replace(day=monthrange(today.year, today.month)[1])
 
 
-class AccountInvoice(models.Model):
+class AccountInvoiceBankWizard(models.TransientModel):
     _name = 'account.invoice.bank_wizard'
 
     start_date = fields.Date(
