@@ -1,9 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <odoo noupdate="0">
-    <record id="subtype_bank" model="account.invoice.subtype">
-        <field name="name">Bank</field>
-        <field name="type">bank</field>
-    </record>
     <record id="subtype_income" model="account.invoice.subtype">
         <field name="name">Factura Provedor</field>
         <field name="type">in</field>
@@ -11,5 +7,17 @@
     <record id="subtype_outcome" model="account.invoice.subtype">
         <field name="name">Factura Cliente</field>
         <field name="type">out</field>
+    </record>
+    <record id="subtype_outcome_refound" model="account.invoice.subtype">
+        <field name="name">Rembolso Factura Provedor</field>
+        <field name="type">out</field>
+    </record>
+    <record id="subtype_income_refound" model="account.invoice.subtype">
+        <field name="name">Rembolso Factura Cliente</field>
+        <field name="type">in</field>
+    </record>
+    <record id="subtype_bank" model="account.invoice.subtype">
+        <field name="name">Bank</field>
+        <field name="type">bank</field>
     </record>
 </odoo>

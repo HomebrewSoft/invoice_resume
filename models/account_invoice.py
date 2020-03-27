@@ -14,8 +14,8 @@ class AccountInvoice(models.Model):
         selection=[
             ('out_invoice', _('Incomes')),
             ('in_invoice', _('Outcomes')),
-            ('out_refund', _('Incomes')),
-            ('in_refund', _('Outcomes')),
+            ('out_refund', _('Outcomes')),
+            ('in_refund', _('Incomes')),
             ('bank', _('Bank')),
         ],
         compute='_get_type_translated',
@@ -61,8 +61,12 @@ class AccountInvoice(models.Model):
 
     @api.model
     def create(self, values):
-        if values.get('type') in ['out_invoice']:
-            values['subtype_id'] = self.env.ref('invoice_resume.subtype_outcome').id
-        elif values.get('type') in ['in_invoice']:
-            values['subtype_id'] = self.env.ref('invoice_resume.subtype_income').id
+        relations = {
+            'out_invoice': self.env.ref('invoice_resume.subtype_outcome').id,
+            'in_invoice': self.env.ref('invoice_resume.subtype_income').id,
+            'out_refund': self.env.ref('invoice_resume.subtype_outcome_refound').id,
+            'in_refund': self.env.ref('invoice_resume.subtype_income_refound').id,
+            'bank': self.env.ref('invoice_resume.subtype_bank').id,
+        }
+        values['subtype_id'] = relations[values.get('type')]
         return super(AccountInvoice, self).create(values)
