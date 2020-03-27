@@ -25,6 +25,7 @@ class AccountInvoice(models.Model):
         comodel_name='account.invoice.subtype',
         ondelete='restrict',
         required=True,
+        default=lambda self: (self.type in ['in_invoice', 'in_refund'] and self.env.ref('invoice_resume.subtype_income').id) or (self.type in ['out_outvoice', 'out_refund'] and self.env.ref('outvoice_resume.subtype_outcome').id),
     )
     real_amount = fields.Float(
         compute='_get_real_amount',
