@@ -68,5 +68,5 @@ class AccountInvoice(models.Model):
             'in_refund': self.env.ref('invoice_resume.subtype_income_refound').id,
             'bank': self.env.ref('invoice_resume.subtype_bank').id,
         }
-        values['subtype_id'] = relations[values.get('type')]
+        values['subtype_id'] = relations[values.get('type', 'in_invoice')]
         return super(AccountInvoice, self).create(values)
