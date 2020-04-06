@@ -61,12 +61,13 @@ class AccountInvoice(models.Model):
 
     @api.model
     def create(self, values):
-        relations = {
-            'out_invoice': self.env.ref('invoice_resume.subtype_outcome').id,
-            'in_invoice': self.env.ref('invoice_resume.subtype_income').id,
-            'out_refund': self.env.ref('invoice_resume.subtype_outcome_refound').id,
-            'in_refund': self.env.ref('invoice_resume.subtype_income_refound').id,
-            'bank': self.env.ref('invoice_resume.subtype_bank').id,
-        }
-        values['subtype_id'] = relations[values.get('type', 'in_invoice')]
+        if not values.get('subtype_id'):
+            relations = {
+                'out_invoice': self.env.ref('invoice_resume.subtype_outcome').id,
+                'in_invoice': self.env.ref('invoice_resume.subtype_income').id,
+                'out_refund': self.env.ref('invoice_resume.subtype_outcome_refound').id,
+                'in_refund': self.env.ref('invoice_resume.subtype_income_refound').id,
+                'bank': self.env.ref('invoice_resume.subtype_bank').id,
+            }
+            values['subtype_id'] = relations[values.get('type', 'in_invoice')]
         return super(AccountInvoice, self).create(values)

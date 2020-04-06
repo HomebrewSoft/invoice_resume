@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 {
     'name': 'Invoice Resume',
-    'version': '1.4.1',
+    'version': '1.5.0',
     'author': 'HomebrewSoft',
     'website': 'https://github.com/HomebrewSoft/invoice_resume',
     'depends': [
