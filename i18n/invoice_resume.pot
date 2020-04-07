@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 10.0-20190816\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-03-26 23:20+0000\n"
-"PO-Revision-Date: 2020-03-26 23:20+0000\n"
+"POT-Creation-Date: 2020-04-07 03:18+0000\n"
+"PO-Revision-Date: 2020-04-07 03:18+0000\n"
 "Last-Translator: <>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -28,11 +28,9 @@ msgstr ""
 
 #. module: invoice_resume
 #: selection:account.invoice,type_translated:0
-#: selection:account.invoice.subtype,type:0
 #: code:addons/invoice_resume/models/account_invoice.py:10
 #: code:addons/invoice_resume/models/account_invoice.py:19
-#: code:addons/invoice_resume/models/account_invoice.py:54
-#: code:addons/invoice_resume/models/account_invoice_subtype.py:16
+#: code:addons/invoice_resume/models/account_invoice.py:55
 #, python-format
 msgid "Bank"
 msgstr ""
@@ -77,18 +75,17 @@ msgid "ID"
 msgstr ""
 
 #. module: invoice_resume
-#: selection:account.invoice.subtype,type:0
-#: code:addons/invoice_resume/models/account_invoice_subtype.py:14
+#: selection:account.invoice,type_translated:0
+#: code:addons/invoice_resume/models/account_invoice.py:15
 #, python-format
-msgid "Income"
+msgid "Incomes"
 msgstr ""
 
 #. module: invoice_resume
 #: selection:account.invoice,type_translated:0
-#: code:addons/invoice_resume/models/account_invoice.py:15
-#: code:addons/invoice_resume/models/account_invoice.py:17
+#: code:addons/invoice_resume/models/account_invoice.py:18
 #, python-format
-msgid "Incomes"
+msgid "Incomes Refund"
 msgstr ""
 
 #. module: invoice_resume
@@ -97,7 +94,7 @@ msgid "Initial amount"
 msgstr ""
 
 #. module: invoice_resume
-#: code:addons/invoice_resume/models/account_invoice.py:50
+#: code:addons/invoice_resume/models/account_invoice.py:51
 #: model:ir.model,name:invoice_resume.model_account_invoice
 #, python-format
 msgid "Invoice"
@@ -133,18 +130,17 @@ msgid "Name"
 msgstr ""
 
 #. module: invoice_resume
-#: selection:account.invoice.subtype,type:0
-#: code:addons/invoice_resume/models/account_invoice_subtype.py:15
+#: selection:account.invoice,type_translated:0
+#: code:addons/invoice_resume/models/account_invoice.py:16
 #, python-format
-msgid "Outcome"
+msgid "Outcomes"
 msgstr ""
 
 #. module: invoice_resume
 #: selection:account.invoice,type_translated:0
-#: code:addons/invoice_resume/models/account_invoice.py:16
-#: code:addons/invoice_resume/models/account_invoice.py:18
+#: code:addons/invoice_resume/models/account_invoice.py:17
 #, python-format
-msgid "Outcomes"
+msgid "Outcomes Refund"
 msgstr ""
 
 #. module: invoice_resume
@@ -153,7 +149,7 @@ msgid "Real amount"
 msgstr ""
 
 #. module: invoice_resume
-#: code:addons/invoice_resume/models/account_invoice.py:52
+#: code:addons/invoice_resume/models/account_invoice.py:53
 #, python-format
 msgid "Refund"
 msgstr ""
@@ -169,23 +165,18 @@ msgid "Subtype id"
 msgstr ""
 
 #. module: invoice_resume
-#: model:ir.model.fields,field_description:invoice_resume.field_account_invoice_subtype_type
-msgid "Type"
-msgstr ""
-
-#. module: invoice_resume
 #: model:ir.model.fields,field_description:invoice_resume.field_account_invoice_type_translated
 msgid "Type translated"
 msgstr ""
 
 #. module: invoice_resume
-#: code:addons/invoice_resume/models/account_invoice.py:51
+#: code:addons/invoice_resume/models/account_invoice.py:52
 #, python-format
 msgid "Vendor Bill"
 msgstr ""
 
 #. module: invoice_resume
-#: code:addons/invoice_resume/models/account_invoice.py:53
+#: code:addons/invoice_resume/models/account_invoice.py:54
 #, python-format
 msgid "Vendor Refund"
 msgstr ""

@@ -14,8 +14,8 @@ class AccountInvoice(models.Model):
         selection=[
             ('out_invoice', _('Incomes')),
             ('in_invoice', _('Outcomes')),
-            ('out_refund', _('Outcomes')),
-            ('in_refund', _('Incomes')),
+            ('out_refund', _('Outcomes Refund')),
+            ('in_refund', _('Incomes Refund')),
             ('bank', _('Bank')),
         ],
         compute='_get_type_translated',
