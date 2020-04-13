@@ -25,7 +25,7 @@ class AccountInvoice(models.Model):
         comodel_name='account.invoice.subtype',
         ondelete='restrict',
         required=True,
-        default=lambda self: (self.type in ['in_invoice', 'in_refund'] and self.env.ref('invoice_resume.subtype_income').id) or (self.type in ['out_outvoice', 'out_refund'] and self.env.ref('outvoice_resume.subtype_outcome').id),
+        default=lambda self: self.relations().get(self._context.get('type')),
     )
     real_amount = fields.Float(
         compute='_get_real_amount',
@@ -62,12 +62,14 @@ class AccountInvoice(models.Model):
     @api.model
     def create(self, values):
         if not values.get('subtype_id'):
-            relations = {
-                'out_invoice': self.env.ref('invoice_resume.subtype_outcome').id,
-                'in_invoice': self.env.ref('invoice_resume.subtype_income').id,
-                'out_refund': self.env.ref('invoice_resume.subtype_outcome_refound').id,
-                'in_refund': self.env.ref('invoice_resume.subtype_income_refound').id,
-                'bank': self.env.ref('invoice_resume.subtype_bank').id,
-            }
-            values['subtype_id'] = relations[values.get('type', 'in_invoice')]
+            values['subtype_id'] = self.relations().get(values.get('type', 'in_invoice'))
         return super(AccountInvoice, self).create(values)
+
+    def relations(self):
+        return {
+            'out_invoice': self.env.ref('invoice_resume.subtype_outcome').id,
+            'in_invoice': self.env.ref('invoice_resume.subtype_income').id,
+            'out_refund': self.env.ref('invoice_resume.subtype_outcome_refound').id,
+            'in_refund': self.env.ref('invoice_resume.subtype_income_refound').id,
+            'bank': self.env.ref('invoice_resume.subtype_bank').id,
+        }
